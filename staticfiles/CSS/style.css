@@ -1,0 +1,219 @@
+/* Home Page CSS Start */
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    min-width: 400px;
+}
+
+.col-2 img {
+    padding: 1rem 0;
+}
+
+.main-slide div:nth-child(1) {
+    padding-top: 20px;
+    flex: 1;
+    font-size: 30px;
+}
+
+.main-slide div:nth-child(1) p {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.main-slide div:nth-child(1) span {
+    color: red;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: rgb(253, 176, );
+}
+
+.main-slide div:nth-child(1) a {
+    cursor: pointer;
+    margin-top: 15px;
+    width: 160px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 50px;
+    background-color: rgb(253, 77, 8);
+    border-radius: 5px;
+    border: 1px solid rgb(253, 77, 8);
+    box-shadow: 0 10px 15px rgb(250, 120, 69);
+}
+.main-slide div:nth-child(1) a:hover{
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(250, 120, 69);
+    border: 1px solid rgb(253, 77, 8);
+    color: rgb(253, 77, 8);
+}
+
+.main-slide2 {
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 140px;
+    height: 50px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 50px;
+    background-color: rgb(253, 77, 8);
+    border-radius: 5px;
+    border: 1px solid rgb(253, 77, 8);
+    box-shadow: 0 10px 15px rgb(250, 120, 69);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(250, 120, 69);
+    border: 1px solid rgb(253, 77, 8);
+    color: rgb(253, 77, 8);
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 1.5rem;
+}
+
+.main-slide2 {
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.fooding {
+    flex: 0.5;
+}
+
+.fooding img {
+    max-width: 500px;
+    width: 45vw;
+}
+
+.questions {
+    flex: 0.5;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.questions h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.q-ans {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.q-ans img {
+    width: 45px;
+}
+
+.q-ans div:first-child {
+    padding: 10px;
+    border-radius: 50px;
+    height: 65px;
+    text-align: center;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.q-ans div:first-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.q-ans div:first-child(2) p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.main-slide3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.main-slide3 .fav-head {
+    text-align: center;
+    width: 450px;
+    margin-top: 30px;
+}
+
+.main-slide3 .fav-head h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.main-slide3 .fav-head p {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-slide3 .fav-food {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.main-slide3 .fav-food .item {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(119, 119, 119, 0.43%);
+    width: 250px;
+    padding: 15px;
+    padding-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-slide3 .fav-food .item div {
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+.main-slide3 .fav-food .item img {
+    width: 190px;
+    margin-bottom: 15px;
+}
+
+.main-slide3 .fav-price {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.main-slide3 .dsgn {
+    background-color: rgba(255, 214, 176);
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    border-radius: 10px;
+}
+/* Home Page CSS End */
+

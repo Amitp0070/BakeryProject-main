@@ -1,0 +1,35 @@
+/* Menu Page CSS Start */
+.card {
+    border-radius: 2rem;
+    border: 1px solid black;
+    box-shadow: 0 2px 15px rgb(65, 62, 61);
+}
+
+.card-img-top {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.btn {
+    cursor: pointer;
+    /* margin-top: 1px; */
+    width: 120px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 30px;
+    background-color: rgb(250, 120, 69);
+    border-radius: 5px;
+    border: 1px solid rgb(253, 77, 8);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(250, 120, 69);
+    border: 1px solid rgb(253, 77, 8);
+    color: rgb(253, 77, 8);
+}
+
+/* Menu Page CSS End*/

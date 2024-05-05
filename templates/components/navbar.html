@@ -1,0 +1,102 @@
+{% load static %}
+
+{% block css %}
+<style>
+  .logo{
+    width: 5%;
+    /* height: 60px; */
+    padding-right: .25rem;
+  }
+  .navbar {
+    background-color: bisque;
+  }
+  #menuList a:hover{
+    background-color: rgba(243, 118, 118, 0.748);
+    opacity: .9;
+    border-radius: 1rem;
+  }
+
+  .navbar ul li {
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #navbarNav {
+    align-items: center;
+    justify-content: center;
+  }
+  #log-Button a{
+    background-color: rgba(246, 165, 24, 0.911) !important;
+    border-radius: .35rem;
+    opacity:  .9;
+  }
+  #loginButton a:hover{
+    background-color: rgba(249, 249, 249, 0.911) !important;
+    border-radius: .35rem;
+    opacity:  .9;
+  }
+</style>
+{% endblock css %}
+
+{% block body %}
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img class="logo" src="{% static '/images/tastybitelogo.png' %}" alt="">
+      <a class="navbar-brand" href="#">
+        <b>TastyBiteHub</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto" id="menuList">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><i class="fa-solid fa-house mx-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'menu' %}"><i class="fa-solid fa-list-ul me-1"></i>Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'order' %}"><i class="fa-brands fa-opencart me-1"></i>Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}"><i class="fa-solid fa-address-book me-1"></i>Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}"><i class="fa-solid fa-clipboard-user me-1"></i>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'book_table' %}"><i class="fa-solid fa-clipboard-user me-1"></i>Book Table</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-person"></i> {{ user.username }}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item" id="loginButton">
+              <a class="nav-link " href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item" id="log-Button">
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+{% endblock body %}

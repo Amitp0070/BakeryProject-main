@@ -1,0 +1,86 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/CSS/aboutstyle.css' %}">
+    <title>About Us</title>
+</head>
+</html>
+
+<body style="background-color: bisque;">
+    <div class="container">
+        <div class="column">
+            <h2>About Us</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vero, rerum debitis fugiat, repellendus
+                explicabo voluptatibus eos, dolores at quisquam illum doloribus quos sapiente aperiam impedit nulla
+                praesentium error magnam recusandae! Tenetur perspiciatis hic eius, aut dicta dignissimos fuga odit
+                beatae expedita, maxime tempora id molestias culpa, voluptatem doloremque repellat officia facilis! Quo
+                minus nobis facere mollitia iste reprehenderit, quod architecto accusantium repellat officia error culpa
+                et obcaecati dolore nam magni explicabo minima repudiandae recusandae consequatur facilis dignissimos
+                veniam eligendi dolorum. Quisquam, eligendi perspiciatis magnam dolorem tempora assumenda excepturi
+                harum, ipsam corrupti nostrum quibusdam enim, similique itaque aspernatur suscipit officiis?</p>
+        </div>
+        <div class="column">
+            <img class="chefs-img" src="{% static '/images/cheffs3.png' %}" alt="" width="100%">
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <h1 style="text-align: center; padding-bottom: 2rem;"><b>Our Golden Chefs</b></h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="border-radius: 2rem;">
+                    <img src="{% static '/images/chef1.png' %}" class="card-img-top mx-auto d-block img-fluid"
+                         style="max-width: 200px; height: 346px;" alt="Centered Image">
+                    <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="color: red;"><b>Chef Name</b></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, earum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="border-radius: 2rem;">
+                    <img src="{% static '/images/chef4.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
+                         style="max-width: 200px; height: 346px;" alt="Centered Image">
+                    <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="color: red;"><b>Chef Name</b></h5>
+                        <p class="card-text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, earum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="border-radius: 2rem;">
+                    <img src="{% static '/images/5.png' %}" class="card-img-top mx-auto d-block img-fluid"
+                         style="max-width: 200px; height: 346px;" alt="Centered Image">
+                    <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="color: red;"><b>Chef Name</b></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, earum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="border-radius: 2rem;">
+                    <img src="{% static '/images/2.png' %}" class="card-img-top mx-auto d-block img-fluid"
+                         style="max-width: 200px; height: 346px;" alt="Centered Image">
+                    <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="color: red;"><b>Chef Name</b></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, earum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock body %}

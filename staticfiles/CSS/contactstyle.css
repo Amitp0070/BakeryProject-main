@@ -1,0 +1,20 @@
+button[type="submit"] {
+    cursor: pointer;
+    /* margin-left: 10%; */
+    margin-top: 20px;
+    width: 150px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 30px;
+    background-color: rgb(253, 77, 8);
+    border-radius: 5px;
+    border: 1px solid rgb(253, 77, 8);
+    transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(250, 120, 69);
+    border: 1px solid rgb(253, 77, 8);
+    color: rgb(253, 77, 8);
+}

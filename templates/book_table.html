@@ -1,0 +1,127 @@
+{% extends 'layout/base.html' %} {% load static %} {% block css %}
+
+
+<style>
+    body {
+    background-color: bisque;
+}
+
+.container {
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    margin: 5rem auto;
+}
+
+.container h1 {
+    text-align: center;
+    color: rgb(253, 77, 8);
+    font-weight: bold;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+}
+
+table tr td {
+    padding: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+.Num{
+    padding: .65rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+    margin-left: 60%;
+    margin-top: 20px;
+    width: 150px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 40px;
+    background-color: rgb(253, 77, 8);
+    border-radius: 5px;
+    border: 1px solid rgb(253, 77, 8);
+    transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(250, 120, 69);
+    border: 1px solid rgb(253, 77, 8);
+    color: rgb(253, 77, 8);
+}
+</style>
+{% endblock css %} {% block body %}
+
+
+
+<body style="background-color: bisque">
+    <div class="container" style="width: 500px;">
+
+        <h1>Table Booking Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+
+                <tr>
+                    <td><label for="customer_name">Your Name:</label></td>
+                    <td><input type="text" id="customer_name" name="customer_name" placeholder="Enter your name"
+                            required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Your Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+                </tr>
+                <!-- <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required /> -->
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" id="date" name="date" required></td>
+                </tr>
+                <!-- <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required /> -->
+                <tr>
+                    <td><label for="time">Time:</label></td>
+                    <td><input type="time" id="time" name="time" required></td>
+                </tr>
+            </table>
+
+            <!-- <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required /> -->
+         
+                <label class="Num" for="guests">Number of Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <!-- Add more options as needed -->
+                </select>
+            
+        
+                <button type="submit">Submit Order</button>
+
+            
+        </form>
+    </div>
+</body>
+
+{% endblock body %}

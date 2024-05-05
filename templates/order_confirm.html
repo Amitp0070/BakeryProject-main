@@ -1,0 +1,58 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+
+{% block css %}
+    <style>
+        body{
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+{% endblock css %}
+    
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            background-color: bisque;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make sure the body takes the full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Style the container */
+        .container {
+            text-align: center; /* Center align text within the container */
+            padding: 20px;
+            border: 1px solid #ccc; /* Add border for better visibility */
+            border-radius: 5px; /* Add some border radius for style */
+            background-color: white; /* Set a white background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your order is successful.</h1>
+        <p>Thank you for your order, {{ order.customer_name }}!</p>
+        <p>Your order details:</p>
+        <ul>
+            <li>Menu Item: {{ order.menu_item.name }}</li>
+            <li>Quantity: {{ order.quantity }}</li>
+            <li>Total Price: {{ product.total_price }}</li>
+            <!-- Add any additional order details here -->
+        </ul>
+        <!-- Add any additional content or messages here -->
+    </div>
+</body>
+</html>
+
+{% endblock body %}
+    

@@ -1,0 +1,55 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="{% static '/CSS/orderstyle.css' %}">
+</head>
+
+<body style="background-color: bisque">
+    <div class="container" style="width: 500px;">
+        <h1>Book Your Order</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="menu_item">Menu Item:</label></td>
+                    <td>
+                        <select id="menu_item" name="menu_item_id">
+                            {% for item in menu_items %}
+                            <option value="{{ item.id }}">{{ item.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">Quantity:</label></td>
+                    <td><input type="number" id="quantity" name="quantity" min="1" value="1" placeholder="Enter your quantity" required></td>
+                </tr>
+                <tr>
+                    <td><label for="customer_name">Your Name:</label></td>
+                    <td><input type="text" id="customer_name" name="customer_name" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="customer_email">Your Email:</label></td>
+                    <td><input type="email" id="customer_email" name="customer_email" placeholder="Enter your email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="customer_phone">Your Phone:</label></td>
+                    <td><input type="text" id="customer_phone" name="customer_phone" placeholder="Enter your phone" required></td>
+                </tr>
+            </table>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+{% endblock body %}
