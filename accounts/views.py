@@ -14,17 +14,17 @@ def register_view(request):
 
         if password1 != password2:
             messages.error(request, "Passwords do not match")
-            return redirect('signup')  # Redirect back to signup page
+            return redirect('register')  # Redirect back to signup page
 
         # Check if username is already taken
         if User.objects.filter(username=username).exists():
             messages.error(request, "Username is already taken")
-            return redirect('signup')  # Redirect back to signup page
+            return redirect('register')  # Redirect back to signup page
 
         # Check if email is already registered
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email is already registered")
-            return redirect('signup')  # Redirect back to signup page
+            return redirect('register')  # Redirect back to signup page
 
         # Create the new user
         user = User.objects.create_user(username=username, password=password1, email=email, first_name=first_name, last_name=last_name)

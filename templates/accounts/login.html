@@ -3,9 +3,10 @@
 
 
 {% block body %}
-    
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +14,41 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f5e8; /* Light beige background color */
+            background-color: #f9f5e8;
+            /* Light beige background color */
             margin: 0;
             padding: 0;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-
-        .container {
-            max-width: 400px;
+        .container{
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .card {
+            width: 400px;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .card .reg{
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-size: 20px;
+        }
 
-        h1 {
+        .card h2 {
+            color: red;
+            font-weight: 600;
             text-align: center;
-            margin-bottom: 20px;
-            color: #7c4d1f; /* Brown color for bakery theme */
+            /* Brown color for bakery theme */
         }
 
         .form-group {
@@ -42,7 +58,8 @@
         label {
             display: block;
             font-weight: bold;
-            color: #7c4d1f; /* Brown color for bakery theme */
+            color: #7c4d1f;
+            /* Brown color for bakery theme */
         }
 
         input[type="text"],
@@ -57,7 +74,8 @@
         button[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color: #7c4d1f; /* Brown color for bakery theme */
+            background-color: #7c4d1f;
+            /* Brown color for bakery theme */
             color: #fff;
             border: none;
             border-radius: 3px;
@@ -66,28 +84,32 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #5a3618; /* Darker brown color on hover */
+            background-color: #5a3618;
+            /* Darker brown color on hover */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Login to Bakery Dashboard</h1>
-        <form method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+        <div class="card">
+            <h2>Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <a href="{% url 'register' %}" class="reg">Create an account</a>
+        </div>
     </div>
 </body>
+
 </html>
 {% endblock body %}
-    
-
